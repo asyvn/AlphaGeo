@@ -60,11 +60,14 @@ Tìm dòng ['third_party/py/meliad/transformer/configs'], sửa thành ['mediali
 
 Chỉnh sửa file run.sh
 nano run.sh
-Thêm dấu # vào đầu các dòng
+Thêm dấu # vào đầu các dòng:
+
    pip install --require-hashes -r requirements.txt
+   
    gdown --folder https://bit.ly/alphageometry
    
    mkdir -p $MELIAD_PATH
+   
    git clone https://github.com/google-research/meliad $MELIAD_PATH
 
 ![image](https://github.com/asyvn/AlphaGeo/blob/main/nano2.png?raw=true)
