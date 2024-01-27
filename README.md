@@ -40,3 +40,38 @@ Lưu vào thư mục trên Windows, trong ví dụ lưu vào D:\ag.
 Trên cửa sổ lệnh chạy **mc** và tạo thư mục **ag_ckpt_vocab** ở trong thư mục **alphageometry**. Sau đó mở panel còn lại để chọn **/mnt** đến ổ **d/ag** và copy 03 file nói trên sang thư mục **ag_ckpt_vocab**.
 
 ![image](https://github.com/asyvn/AlphaGeo/blob/main/mc.png?raw=true)
+
+**Cài đặt meliad**
+
+Ở cửa sổ lệnh Ubuntu, chạy:
+   **MELIAD_PATH=meliad_lib/meliad
+   mkdir -p $MELIAD_PATH
+   git clone https://github.com/google-research/meliad $MELIAD_PATH
+   export PYTHONPATH=$PYTHONPATH:$MELIAD_PATH**
+
+Sau khi cài, trong thư mục **alphagometry** sẽ có thư mục **meliad_lib/meliad**.
+
+**Chỉnh sửa file alphagometry.py**
+   **nano alphagometry.py**
+   
+Tìm dòng ['third_party/py/meliad/transformer/configs'], sửa thành ['medialib/meliad/transformer/configs'],
+
+![image](https://github.com/asyvn/AlphaGeo/blob/main/nano1.png?raw=true)
+
+Chỉnh sửa file run.sh
+nano run.sh
+Thêm dấu # vào đầu các dòng
+   pip install --require-hashes -r requirements.txt
+   gdown --folder https://bit.ly/alphageometry
+   
+   mkdir -p $MELIAD_PATH
+   git clone https://github.com/google-research/meliad $MELIAD_PATH
+
+![image](https://github.com/asyvn/AlphaGeo/blob/main/nano2.png?raw=true)
+
+Lưu lại file và chạy file **run.sh**:
+   **bash run.sh**
+
+Khi đó chương trình sẽ solve ở mode alphageometry.
+
+(26.01.2024)
