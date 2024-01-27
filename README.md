@@ -4,7 +4,7 @@
 
 Trên Windows 10 (11), ở ô Search gõ tìm kiếm “Turn Windows features on or off”. Ở hộp thoại Windows Features chọn “Windows Subsystem for Linux”.
 
-![alt text]( https://github.com/asyvn/AlphaGeo/blob/main/WindowsFeatures.png?raw=true)![image](https://github.com/asyvn/AlphaGeo/assets/65102232/1391734f-8d73-476d-b16d-3283bca3b6ce)
+![alt text](https://github.com/asyvn/AlphaGeo/blob/main/WindowsFeatures.png?raw=true)![image]
 
 Ở ô Search gõ “Terminal” để chạy cửa sổ lệnh của Windows. Kiểm tra phiên bản WSL bằng lệnh **wsl --version**.
 
